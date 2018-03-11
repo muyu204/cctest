@@ -1,0 +1,336 @@
+@charset "utf-8";
+/* 页脚 */
+#footer {
+	color: #e2e2e2;
+	padding: 20px;
+	background: #525252;
+	text-align: center;
+	width:100%;
+}
+
+/* 主内容背景 */
+#mainContent {
+	background-image: url(../image/bg.png);
+}
+
+/* 白色背景 */
+.white {
+	background-color: white;
+	border:1px solid #ccc;
+}
+
+#info, #workspace {
+	text-align: center;
+}
+
+/* 姓名 */
+#name {
+	font-size: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/* 字体 */
+.black {
+	color: black;
+}
+
+/* 个人信息中链接的下划线 */
+.info {
+	text-decoration: underline;
+}
+
+/* 常用链接 */
+#href {
+	text-align: center;
+	padding: 13px;
+}
+
+.gray {
+	border: 1px solid #EFEFEF;
+	background-image: url(../image/quicklink_bg.png);
+	width:200px;
+	height:36px;
+	font-weight: bold;
+	padding-top:6px;
+}
+
+/* 按钮 */
+.top-btn {
+	color: white;
+	font-size: 16px;
+	width: 170px;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+}
+
+/* 会议预订按钮 */
+#meeting {
+	background-color: #5D75A5;
+	margin: 28px 40px 28px 60px;
+}
+
+/* 考勤查询按钮 */
+#attence {
+	background-color: #C28B24;
+	margin: 28px 40px 28px 0px;
+}
+
+/* 出差申请按钮 */
+#trip {
+	background-color: #72BC1D;
+	margin: 28px 40px 28px 0px;
+}
+
+/* 请休假按钮 */
+#holiday {
+	background-color: #5197BB;
+	margin: 28px 60px 28px 0px;
+}
+
+#set-btn {
+	position: relative;
+	left:97.5%;
+	top:-95%;
+}
+
+/* 查询按钮 */
+#query {
+	background: #277DCA;
+	border-radius: 4px;
+	color: white;
+	padding: 7px 10px;
+	border:none;
+	margin-left:10px;
+}
+
+#add-img {
+	width: 30px;
+	height: 30px;
+}
+
+#add-btn {
+	width: 100%;
+	border: none;
+}
+
+/* 对ace中item样式的修改 */
+.dd-handle {
+	background-color: #F3F3F3;
+}
+
+.dd-handle, .dd2-content {
+	color: black!important;
+}
+
+/* 不显示日历底部按钮 */
+.mainfoot {
+	display: none;
+}
+
+/* tab选中时字颜色 */
+.je-tabs.brief .je-tabs-title li.on {
+    color: #1871C6!important;
+} 
+/* tab没选中时 */
+.je-tabs .je-tabs-title li {
+	color: #777;
+}
+/* tab选中时下划线颜色 */
+.je-tabs.brief .je-tabs-title li.on:after {
+    border-bottom: 3px solid #4478BE!important;
+}
+.je-grid {
+	font-size: 12px;
+}
+.je-grid tbody{
+	color: #777;
+}
+
+#long-input {
+	width: 160px;
+}
+
+#btnDiv {
+	vertical-align: center;
+}
+
+/* 日历头部颜色 */
+.jedateblue .daybox .arthead {
+    background-color: #277DCA!important;
+ }
+
+ /* 箭头 */
+ .arrow {
+ 	float: right;
+ 	margin-top: -5px;
+ }
+
+ /* 左阴影效果 */
+.triangle-left {
+	width: 0;          
+ 	height: 0;             
+ 	border-width: 11px 6px 11px 6px;          
+ 	border-style: solid;            
+ 	border-color: #888 #888  transparent transparent; 
+ 	float:left;
+ 	position: relative;
+ 	z-index:3;
+ 	left: 22px;
+ 	top: 0px; 
+}
+
+/* 右阴影效果 */
+.triangle-right {
+	width: 0;          
+ 	height: 0;             
+ 	border-width: 11px 6px 11px 6px;          
+ 	border-style: solid;            
+ 	border-color: #888  transparent transparent #888; 
+ 	float:left;
+ 	position: relative;
+ 	left: 200px;
+	top: 0px;
+	z-index: 3;
+ } 
+
+ /* 梯形 */
+ .trapezoid {
+ 	width: 200px;
+ 	height: 33px;
+ 	border-top: 30px solid #3F80DC;
+ 	border-right: 10px solid transparent;
+ 	border-left: 10px solid transparent;    	
+ 	position: absolute; 
+ 	left:50%;
+ 	top: -9px; 
+ 	transform: translateX(-50%);
+ 	z-index:5; 
+ }
+
+/* 工作区图标,链接图标 */
+#space, #hrefImg {
+ 	width: 17px;
+ 	height: 17px;
+ 	position: absolute;
+ 	left: 46px;
+ 	top: -24px;
+}
+
+/* 工作区中字,常用链接中字 */
+#work-span, #href-span  {
+	position: absolute;
+ 	left: 70px;
+ 	top: -25px;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 1.2em;
+} 
+
+.wordDiv {
+	width: 100px;
+	height: 35px;
+	text-align: left;
+	padding: 10px;
+}
+
+/* 修改jeui中表格的一些样式 */
+.je-grid,.je-grid-thead,table {
+	border-left-color: transparent!important;
+	border-right-color: transparent!important;
+} 
+
+td.field-id {
+	color:blue;
+}
+
+.dfields {
+	border-left-color: transparent!important;
+	border-right-color: transparent!important;
+}
+
+.pullleft {
+	float:left;
+}
+
+.menuBar li.active, .menuBar li:hover {
+	background-color: #257ECC;
+}
+
+li.active a,li:hover a {
+	color:white;
+}
+/* 导航栏未选中时字体颜色 */
+.navFont {
+	color: black;
+	font-size: 16px;
+	padding: 0px 30px;
+	margin: 18px 10px;
+} 
+
+#item {
+	width: 55%;
+	margin: 30px 15px;
+}
+
+/* 前半部分item */
+.header-item {
+	width: 100px!important;
+	background: #F6F6F6!important;
+}
+
+.dd2-handle {
+	border-right: transparent!important;
+}
+/* 后半部分item */
+.dd2-content {
+	 background: white!important;
+	 border-right:transparent!important;
+}
+
+/* 常用链接字体 */
+.hrefFont {
+	color: #257ECC!important;
+	font-size: 1.2em;
+}
+
+.hrefFont:hover {
+	color: #fff!important;
+}
+
+.jedateblue .daybox .contlist {
+	width: 400px!important;
+}
+
+.jedatebox {
+	top: 20px!important;
+	height: 280px!important;
+}
+
+.dd-item, .dd-handle {
+	margin-bottom:8px!important;
+}
+.dd2-content {
+	margin:0px;
+}
+
+.dd2-content, .dd2-handle {
+	font-weight: normal!important;
+}
+
+.field-content {
+	width: 260px!important;
+}
+
+.dfields {
+	font-size: 12px!important;
+}
+
+a:hover {
+	text-decoration: none!important;
+}
+
+.bold {
+	font-weight: bold;
+}

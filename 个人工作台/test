@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" href="css/Hui-iconfont/iconfont.css" />
+<link rel="stylesheet" href="jqgrid/css/css/redmond/jquery-ui-1.8.16.custom.css" />
+<link rel="stylesheet" href="jqgrid/css/ui.jqgrid.css" />
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="jqgrid/js/jquery.jqGrid.src.js"></script>
+<script type="text/javascript" src="js/index2.js"></script>
+<style>
+.putcenter {
+    margin: 0 auto;
+}
+
+.pagewidth {
+    width: 1200px;
+}
+
+.pullright {
+    float: right;
+}
+
+.pullleft {
+    float: left;
+}
+
+ul{
+	padding: 0;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #525252;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.toplink {
+    text-decoration: none;
+    color: #525252;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+a.toplink:hover {
+    color: #0000ff;
+}
+
+.topmenu li {
+    float: left;
+    width: 80px;
+}
+
+.topmenu a {
+    text-align: center;
+}
+
+.topmenu img {
+    position: absolute;
+    left: 20px;
+    backface-visibility: hidden;
+}
+
+.topmenu a .img1 {
+    z-index: 1000;
+}
+
+.topmenu a .img2 {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.topmenu p {
+    padding-top: 40px
+}
+
+.topbtn div {
+
+    position: relative;
+    transition: all 1.5s ease;
+    transform-style: preserve-3d;
+}
+
+.topbtn:hover div {
+    transform: rotateY(180deg);
+}
+
+.mainmenu {
+    height: 35px;
+    background: #f1f1f1;
+    border-bottom: 3px solid #1461b1;
+    margin-bottom: 5px;
+}
+
+.mainmenu a {
+    float: left;
+    display: block;
+    color: #525252;
+    text-align: center;
+    line-height: 32px;
+    margin: 0 5px;
+    padding: 0 10px;
+    transition: all 0.5s ease;
+}
+
+.mainmenu a:hover {
+    color: #ffffff;
+    background: #2480cd;
+}
+
+.mainleft {
+    width: 245px;
+}
+
+.mainleft>div,
+.mainright>div {
+    border: 1px solid #f5f5f5;
+}
+
+.mainleft>div:nth-child(1) {
+    height: 250px;
+    background: linear-gradient(to bottom, rgba(231, 231, 231, 1), white, white, white);
+}
+
+.mainleft>div:nth-child(1) a {
+    font-size: 12px;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+.mainleft>div:nth-child(2),
+.mainleft>div:nth-child(3) {
+
+    margin-top: 30px;
+}
+
+.marktitlearea {
+    position: relative;
+    height: 30px;
+    width: 170px;
+
+    margin-top: -10px;
+}
+
+.marktitle {
+    position: absolute;
+    height: 0px;
+    width: 160px;
+    border-top: 30px solid #3F80DC;
+    border-top-color: linear-gradient(to bottom, rgba(231, 231, 231, 1), white);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    left: 5px;
+}
+
+.marktitle2 {
+    top: 5px;
+    position: absolute;
+    height: 0px;
+    width: 170px;
+    border-top: 25px solid #cccccc;
+
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+}
+
+.marktitle3 {
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    width: 170px;
+    color: #ffffff;
+}
+
+.workspace li {
+    width: 70px;
+    float: left;
+    padding: 5px 0;
+    margin: 5px;
+}
+
+.href a {
+    height: 36px;
+    line-height: 36px;
+    width: 200px;
+    background: url(image/quicklink_bg.png);
+    color: #1560b1;
+    font-weight: bold;
+    display: block;
+    margin: 5px auto;
+}
+
+.href a:hover {
+    color: white;
+    background: url(image/quicklink_bg_hover.png);
+}
+
+.quicklink a {
+    height: 50px;
+    line-height: 50px;
+    width: 180px;
+   
+    border-radius: 5px;
+    display: inline-block;
+    color: #ffffff;
+
+    text-align: center;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    margin:20px;
+}
+
+.quicklink a:hover {
+	filter:brightness(1.2);
+	
+}
+
+.quicklink a:nth-child(1) {
+ background-color: #5e74a6;
+    background-image: url(image/quickicon_1.png);
+}
+ .quicklink a:nth-child(4) {
+ background-color: #5197bb;
+    background-image: url(image/quickicon_4.png);
+}
+.quicklink a:nth-child(2) {
+ background-color: #c28b24;
+    background-image: url(image/quickicon_2.png);
+}
+.quicklink a:nth-child(3) {
+ background-color: #75bc1e;
+    background-image: url(image/quickicon_3.png);
+}
+.mytab{
+	
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.mytab li{
+	float: left;
+}
+.mytab a{
+	height: 35px;
+    line-height: 35px;
+    width: 100px;
+   
+    border-bottom: 3px solid #ffffff;
+    display: inline-block;
+    color: #525252;
+
+    text-align: center;
+}
+.mytab a:hover{
+	
+    border-bottom: 3px solid #3c7acf;
+    display: inline-block;
+    color: #3c7acf;
+
+}
+label{
+	font-weight: normal;
+}
+.search{
+	height: 26px;
+	line-height: 26px;
+	padding: 0px;
+	width: 70px;
+}
+.footer{
+	height: 80px;
+	background: #605e5f;
+	color: #f5f5f5;
+	font-size: 12px;
+	text-align: center;
+	line-height: 8px;
+	padding-top: 10px;
+	margin: 10px 0 0 0;
+}
+</style>
+
+<body>
+    <div>
+        <div class="putcenter pagewidth">
+            <div style="overflow: hidden;">
+                <div class="pullright">
+                    <img src="image/photo.png" style="vertical-align: middle;"><a class="toplink" href="#" style="vertical-align: middle;">user</a><a class="toplink" style="vertical-align: middle;" href="#"><span style="margin:0 10px;">|</span>退出</a>
+                </div>
+            </div>
+            <div style="height: 80px;margin:10px 0">
+                <img src="image/logo.png" />
+                <ul class=" topmenu pullright" style="margin-top: 10px">
+                    <li>
+                        <a href="#" class="topbtn">
+                            <div style="background: #ff0000"><img class="img1" src="image/topbtn_1.png" alt="" width="40px" height="40px">
+                                <img class="img2" src="image/topbtn_1_hover.png" alt="" width="40px" height="40px">
+                            </div>
+                            <p>1111</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="topbtn">
+                            <div style="background: #ff0000"><img class="img1" src="image/topbtn_2.png" alt="" width="40px" height="40px">
+                                <img class="img2" src="image/topbtn_2_hover.png" alt="" width="40px" height="40px">
+                            </div>
+                            <p>1111</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="topbtn">
+                            <div style="background: #ff0000"><img class="img1" src="image/topbtn_3.png" alt="" width="40px" height="40px">
+                                <img class="img2" src="image/topbtn_3_hover.png" alt="" width="40px" height="40px">
+                            </div>
+                            <p>1111</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="topbtn">
+                            <div style="background: #ff0000"><img class="img1" src="image/topbtn_4.png" alt="" width="40px" height="40px">
+                                <img class="img2" src="image/topbtn_4_hover.png" alt="" width="40px" height="40px">
+                            </div>
+                            <p>1111</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="topbtn">
+                            <div><img class="img1" src="image/topbtn_5.png" alt="" width="40px" height="40px">
+                                <img class="img2" src="image/topbtn_5_hover.png" alt="" width="40px" height="40px">
+                            </div>
+                            <p>1111</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mainmenu">
+        <div class="putcenter pagewidth">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu1</a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="overflow: hidden;">
+        <div class="putcenter pagewidth">
+            <div class="mainleft pullleft">
+                <div style="text-align: center;">
+                    <div class="putcenter" style="height:100px;width: 100px; margin-bottom: 10px;border: 4px solid #cccccc;   border-radius: 50px;margin-top: 20px;background: url(image/2.jpg);background-size: cover;"></div>
+                    <p style="text-align: center;font-weight: bold;">王二华</p>
+                    <p style="text-align: center;font-size: 12px">人事部门</p>
+                    <a href="#" class="info black">更新头像</a>
+                    <a href="#" class="info black">个性化设置</a>
+                    <br/>
+                    <a href="#" class="info black">个人信息维护</a>
+                    <a href="#" class="info black">其他设置</a>
+                </div>
+                <div style="text-align: center;height: 250px">
+                    <div class="marktitlearea putcenter">
+                        <div class="marktitle2"></div>
+                        <div class="marktitle "></div>
+                        <div class="marktitle3 "><img src="image/workspace.png" width="15px" height="14px">&nbsp;个人工作区</div>
+                    </div>
+                    <ul class="workspace" style="padding:5px 0;">
+                        <li><a href="#" class="pullleft"><img src="image/icon_01.png" alt="">个人投稿</a></li>
+                        <li><a href="#" class="pullleft"><img src="image/icon_02.png" alt="">稿件维护</a></li>
+                        <li><a href="#" class="pullleft"><img src="image/icon_03.png" alt="">运行日历</a></li>
+                        <li><a href="#" class="pullleft"><img src="image/icon_04.png" alt="">总行通讯录</a></li>
+                        <li><a href="#" class="pullleft"><img src="image/icon_05.png" alt="">分行通讯录</a></li>
+                        <li><a href="#" class="pullleft"><img src="image/icon_06.png" alt="">园区通讯录</a></li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <div class="marktitlearea putcenter">
+                        <div class="marktitle2"></div>
+                        <div class="marktitle "></div>
+                        <div class="marktitle3 "><img src="image/href.png" width="15px" height="14px">&nbsp;常用链接</div>
+                    </div>
+                    <ul class="href" style="padding:5px 0;">
+                        <a href="#">办公信息平台</a>
+                        <a href="#">办公信息平台</a>
+                        <a href="#">办公信息平台</a>
+                        <a href="#">办公信息平台</a>
+                        <a href="#">办公信息平台</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="mainright " style="margin-left: 255px;">
+                <div class="quicklink" style="text-align: center;">
+                    <a href="#">会议预定</a>
+                     <a href="#">会议预定</a>
+                      <a href="#">会议预定</a>
+                       <a href="#">会议预定</a>
+                </div>
+            	<div style="margin-top: 10px">
+            		<ul class="mytab" style="overflow: hidden;">
+            			<li><a href="#">我的待办</a></li>
+            			<li><a href="#">我的待办</a></li>
+            			<li><a href="#">我的待办</a></li>
+            			<li><a href="#">我的待办</a></li>
+            		</ul>
+            		<div style="text-align: center;">
+            			<label for="status">状态</label>
+            			<input type="text" id="status" style="vertical-align: middle;"/>
+            			
+            			<label for="date" style="margin: 0 0 0 50px">日期</label>
+            			<input type="text" id="date" style="vertical-align: middle;"/>
+            			<label for="to">至</label>
+            			<input type="text" id="to"  style="vertical-align: middle;" />
+            			<button type="button" class="btn btn-primary search" style="vertical-align: middle;"><i class="Hui-iconfont">&#xe665;</i>查询</button>
+            		</div>
+            		<table id="list2" style="width: 1000PX"></table> 
+					<div id="pager2" style="width: 100%"></div>
+
+            	</div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+    	<p><img src="image/read.png" class="read"/>&nbsp;今日浏览量:2222&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/read.png" class="read"/>&nbsp;总浏览量:10000</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国建设银行&nbsp;&nbsp;&nbsp;&nbsp;版权所有</p>
+			<p>本网站只供我行内部人员浏览&nbsp;&nbsp;不得将本网站所载的资料向外披露</p>
+    </div>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
